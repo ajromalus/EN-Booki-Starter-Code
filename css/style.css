@@ -13,6 +13,98 @@
     color: var(--main-color);
 }
 
+.logo {
+    display: flex;
+    justify-content: left;
+    width: 61px;
+    height: 19px;
+
+}
+
+.nav-section {
+    display: flex;
+}
+nav ul {
+    display:flex;
+    list-style: none;
+    justify-content: flex-end;
+    margin: 0;
+    padding-bottom: 5px;
+    right: 0;
+}
+
+li {
+    padding: 20px;
+}
+
+.search-input {
+    flex-grow: 1;
+    border: 1px solid lightgrey;
+    outline: none;
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+    background-color: transparent;
+}
+
+.search-btn {
+    background-color: #0065FC;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 0 60px 60px 0;
+}
+
+.Search-bar {
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    overflow: hidden;
+    max-width: 300px;
+
+    background-color: white;
+
+}
+
+.Loc-Marker {
+    background-color: lightgrey;
+    width: 14px;
+    height: 18px;
+
+}
+
+.filter-bar {
+    display: flex;
+}
+
+.filters {
+
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+
+}
+
+.filter-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid lightgrey;
+    border-radius: 40px;
+    padding: 5px 15px;
+    background-color: white;
+
+}
+
+
+.icons {
+    width: 22px;
+    height: 22px;
+}
+
+.Infobar {
+    display: flex;
+}
 body {
     display: flex;
     justify-content: center;
@@ -66,8 +158,37 @@ body {
 }
 
 /****** Accommodation ***********/
+
+.accommodation-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 280px);
+    grid-gap: 10px;
+    justify-content: center;
+
+
+}
+
+.accommodation-pictures {
+    width: 250.33px;
+    height: 207.25px;
+    border-radius: 10px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
 .accommodation {
     width: 65%;
+}
+
+.accommodation-card {
+     background-color: white;
+    border-radius: 10px;
+    padding: 5px;
+    width: 250.33px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+
+
+
 }
 
 /****** Popular ***********/
@@ -113,4 +234,53 @@ body {
 
 .popular-cards .card-rating {
     margin-bottom: 5px;
+}
+/*Things to do*/
+
+.thingstodo {
+    margin: 50px;
+    padding: 20px;
+    display: flex;
+
+}
+.about {
+    background-color: lightgrey;
+}
+
+.list-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+
+}
+
+.bold {
+    font-weight: bold;
+}
+
+/*media*/
+@media (max-width: 768px) and (min-width: 320px) {
+    .accommodation-and-popular {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .accommodation-grid {
+        width: 100%;
+        flex-direction: column;
+        margin-bottom: 30px;
+        justify-content: center;
+
+    }
+
+    .filters {
+        flex-direction: column;
+    }
 }
