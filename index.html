@@ -22,11 +22,11 @@
             <img class="logo" src="/Users/ajcole/Documents/GitHub/EN-Booki-Starter-Code/images/logo/Booki.png">
             <!-- add the nav bar -->
             <nav>
-                <div class="nav-section">
-                </div>
-                <ul>
-                    <li>Accommodation</li>
-                    <li>Things to Do</li>
+                
+                <ul class="nav-section">
+
+                    <li><a href="#accomodation">Accommodation</a></li>
+                    <li><a href="#thingstodo">Things to Do</a></li>
                 </ul>
             </nav>
 
@@ -35,12 +35,12 @@
             <h2>Find a place to stay for your dream vacation</h2>
             <h4>In the heart of the city or surrounded by nature</h4>
         </div>
-        <div class="Search-bar">
+        <form class="Search-bar">
             <img class="Loc-Marker" src="/Users/ajcole/Documents/GitHub/EN-Booki-Starter-Code/images/logo/Vector.png" alt="location">
             <input type="search" name="LocSearch" class="search-input">
             <button class="search-btn">Search</button>
 
-        </div>
+        </form>
         <div class="filters">
             <h2>Filters</h2>
             <button class="filter-btn"> 
@@ -66,9 +66,10 @@
         </div>
         <main>
             <div class="accommodation-and-popular">
-                <section class="accommodation">
+                <section id="accommodation" class="accommodation">
                     <h2>Marseille Accommodation</h2>
                     <div class="accommodation-grid">
+                        <a href="#"> 
                      <article class="accommodation-card">
                             <img class="accommodation-pictures" src="images/accommodation/fred-kleber.jpg" alt="port hotel image" title="The Port Hotel">
                             <div class="card-content">
@@ -86,6 +87,8 @@
                                 </div>
                             </div>
                         </article>
+                        </a>
+                        <a href="#">
                         <article class="accommodation-card">
                             <img class="accommodation-pictures" src="images/accommodation/febrian-zakaria.jpg" alt="Amina's Hotel picture" title="Amina's Hotel">
                             <div class="card-content">
@@ -103,6 +106,8 @@
                                 </div>
                             </div>
                         </article>
+                        </a>
+                        <a href="#">
                         <article class="accommodation-card">
                             <img class="accommodation-pictures" src="images/accommodation/reisetopia.jpg" alt="Amina's Hotel picture" title="Amina's Hotel">
                             <div class="card-content">
@@ -120,6 +125,8 @@
                                 </div>
                             </div>
                         </article>
+                        </a>
+                        <a href="#">
                         <article class="accommodation-card">
                             <img class="accommodation-pictures" src="images/accommodation/annie-spratt.jpg" alt="Amina's Hotel picture" title="Amina's Hotel">
                             <div class="card-content">
@@ -137,6 +144,8 @@
                                 </div>
                             </div>
                         </article>
+                        </a>
+                        <a href="#">
                         <article class="accommodation-card">
                             <img class="accommodation-pictures" src="images/accommodation/marcus-loke.jpg" alt="Amina's Hotel picture" title="Amina's Hotel">
                             <div class="card-content">
@@ -154,6 +163,8 @@
                                 </div>
                             </div>
                         </article>
+                        </a>
+                        <a href="#">
                         <article class="accommodation-card">
                             <img class="accommodation-pictures" src="images/accommodation/nicate-lee.jpg" alt="Amina's Hotel picture" title="Amina's Hotel">
                             <div class="card-content">
@@ -171,6 +182,7 @@
                                 </div>
                             </div>
                         </article>
+                        </a>
                     </div>
                     <!-- add accommodation images -->
                 </section>
@@ -234,7 +246,7 @@
                     </div>
                 </section>
             </div>
-            <div class="thingstodo">
+            <div id="thingstodo" class="thingstodo">
                 <div class="activities">
                 <h2 class="section-title">Things to Do in Marseille</h2>
                 <img src="/Users/ajcole/Documents/GitHub/EN-Booki-Starter-Code/images/activites/TheOldPort.png" alt="port">

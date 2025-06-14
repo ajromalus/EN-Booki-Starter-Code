@@ -21,10 +21,8 @@
 
 }
 
+ 
 .nav-section {
-    display: flex;
-}
-nav ul {
     display:flex;
     list-style: none;
     justify-content: flex-end;
@@ -93,7 +91,14 @@ li {
     border-radius: 40px;
     padding: 5px 15px;
     background-color: white;
+    cursor: pointer;
 
+}
+
+.filter-btn:hover {
+
+    background-color: lightgrey;
+    
 }
 
 
@@ -111,9 +116,10 @@ body {
 }
 
 .main-container {
-    width: 100%;
-    padding: 0 50px;
-    box-sizing: border-box;
+    max-width: 1440px;
+    min-width: 1024px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .section-title {
