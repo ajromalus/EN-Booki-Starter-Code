@@ -21,7 +21,11 @@
 
 }
 
- 
+ a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+ }
 .nav-section {
     display:flex;
     list-style: none;
@@ -29,6 +33,16 @@
     margin: 0;
     padding-bottom: 5px;
     right: 0;
+}
+
+a.navLinks {
+    text-decoration: none;
+    color: black;
+}
+a.navLinks:hover {
+
+    text-decoration: overline #0065FC;
+    color:#0065FC ;
 }
 
 li {
@@ -78,6 +92,7 @@ li {
 .filters {
 
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
     padding: 10px;
 
@@ -117,8 +132,7 @@ body {
 
 .main-container {
     max-width: 1440px;
-    min-width: 1024px;
-    margin: 0 auto;
+    width: 100%;
     padding: 0 20px;
 }
 
@@ -129,7 +143,9 @@ body {
 
 .card {
     background-color: white;
+    display: flex;
     border-radius: 20px;
+    box-sizing: border-box;
     padding: 5px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
@@ -153,6 +169,8 @@ body {
 /****** Accommodation And Popular ***********/
 .accommodation-and-popular {
     display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
     justify-content: space-between;
 }
 
@@ -167,9 +185,11 @@ body {
 
 .accommodation-grid {
     display: grid;
-    grid-template-columns: repeat(3, 280px);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 10px;
-    justify-content: center;
+    padding: 10px;
+    box-sizing: border-box;
+    
 
 
 }
@@ -194,12 +214,11 @@ body {
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 
 
-
 }
 
 /****** Popular ***********/
 .popular {
-    width: 32%;
+    width: 33.3%;
 }
 
 .popular-title {
@@ -210,7 +229,9 @@ body {
 
 .popular-cards .card {
     display: flex;
+    height: 33.3%;
     margin-top: 33px;
+    box-sizing: border-box;
 }
 
 .popular-cards img {
@@ -231,7 +252,6 @@ body {
 
 .popular-cards .card-title {
     margin-top: 10px;
-    margin-bottom: 4px;
 }
 
 .popular-cards .card-subtitle {
@@ -245,8 +265,9 @@ body {
 
 .thingstodo {
     margin: 50px;
-    padding: 20px;
     display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr);
+    gap: 10px;
 
 }
 .about {
@@ -271,11 +292,27 @@ body {
     font-weight: bold;
 }
 
+
 /*media*/
-@media (max-width: 768px) and (min-width: 320px) {
+@media (max-width: 768px) {
+
+    body {
+        padding: 0;
+        margin: 0;
+        font-size: 14px;
+    }
+
+    .main-container {
+        padding: 10px;
+        width: 100%;
+        flex-direction: column;
+    }
+    
+
+
     .accommodation-and-popular {
         flex-direction: column;
-        justify-content: center;
+
     }
 
     .accommodation-grid {
@@ -288,5 +325,13 @@ body {
 
     .filters {
         flex-direction: column;
+        align-items: flex-start;
     }
+
+    .thingstodo {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
 }
