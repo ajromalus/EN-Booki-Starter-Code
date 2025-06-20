@@ -51,7 +51,7 @@ li {
 
 .search-input {
   flex-grow: 1;
-  border: 1px solid lightgrey;
+  border: 1px solid #F2F2F2;
   outline: none;
   padding: 10px;
   font-size: 16px;
@@ -62,24 +62,39 @@ li {
 .search-btn {
   background-color: #0065FC;
   color: white;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
   border: none;
-  padding: 10px 30px;
-  border-radius: 0 60px 60px 0;
+  padding: 12px 24px;
+  border-radius: 0px 15px 15px 0px;
 }
 
 .Search-bar {
   display: flex;
   align-items: center;
   border-radius: 50px;
-  overflow: hidden;
   max-width: 300px;
   background-color: white;
 }
 
-.Loc-Marker {
-  background-color: lightgrey;
-  width: 14px;
-  height: 18px;
+.loc-marker {
+  font-size: 20px;
+  color: #000; 
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.loc-container {
+  background-color: #F2F2F2;
+  padding: 11px;
+  border-radius: 15px 0px 0px 15px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+
 }
 
 .filter-bar {
@@ -97,7 +112,7 @@ li {
   display: flex;
   align-items: center;
   gap: 8px;
-  border: 1px solid lightgrey;
+  border: 1px solid #F2F2F2;
   border-radius: 40px;
   padding: 5px 15px;
   background-color: white;
@@ -105,7 +120,7 @@ li {
 }
 
 .filter-btn:hover {
-  background-color: lightgrey;
+  background-color: #F2F2F2;
 }
 
 .icons {
@@ -120,6 +135,9 @@ li {
 body {
   display: flex;
   justify-content: center;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
 .main-container {
@@ -268,7 +286,7 @@ body {
 }
 
 .about {
-  background-color: lightgrey;
+  background-color: #F2F2F2;
 }
 
 .list-container {
@@ -296,6 +314,10 @@ body {
     font-size: 14px;
   }
 
+  .logo {
+    justify-content: center;
+    align-items: center;
+  }
   .main-container {
     padding: 10px;
     width: 100%;
@@ -306,6 +328,27 @@ body {
     flex-direction: column;
   }
 
+  .popular {
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+  }
+
+}
+ /* .nav-section {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px 0;
+  }
+  a.navLinks:hover {
+  text-decoration: underline #0065FC;
+  color: #0065FC;
+}
+*/
+  .list-container {
+    flex-direction: column;
+  }
   .accommodation-grid {
     width: 100%;
     flex-direction: column;
@@ -314,13 +357,17 @@ body {
   }
 
   .filters {
-    flex-direction: column;
+    flex-direction:grid;
     align-items: flex-start;
   }
 
   .thingstodo {
     display: grid;
+    aspect-ratio: 16 / 9; 
+    width: 100%;
+    height: auto;
+    object-fit: cover;
     grid-template-columns: 1fr;
     gap: 10px;
   }
-}
+
