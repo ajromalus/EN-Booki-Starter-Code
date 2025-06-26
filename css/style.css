@@ -14,6 +14,14 @@
   color: var(--main-color);
 }
 
+.main-container {
+  max-width: 1440px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  padding: 0 20px;
+}
 .header {
     display: row;
     justify-content: space-between;
@@ -176,15 +184,11 @@ body {
   font-family: Arial, sans-serif;
 }
 
-.main-container {
-  max-width: 1440px;
-  width: 100%;
-  padding: 0 20px;
-}
 
 .section-title {
   margin: 0;
   font-size: 22px;
+  
 }
 
 .card {
@@ -221,6 +225,8 @@ body {
 .accommodation-and-popular {
   display: flex;
   flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
   gap: 20px;
   justify-content: space-between;
 }
@@ -235,7 +241,9 @@ body {
 /* Accommodation */
 .accommodation-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
   grid-gap: 10px;
   padding: 10px;
   box-sizing: border-box;
@@ -252,7 +260,10 @@ body {
 }
 
 .accommodation {
-  width: 65%;
+  width: 100%;
+  flex-wrap: nowrap;
+
+
 }
 
 .accommodation-card {
@@ -271,6 +282,7 @@ body {
 /* Popular */
 .popular {
   width: 33.3%;
+  display: flex;
 }
 
 .popular-title {
@@ -315,12 +327,37 @@ body {
 }
 
 /* Things to do */
+
+.thingsTitle {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  margin: 0;
+  white-space: nowrap;  
+  font-size: 22px;
+  margin-bottom: 20px;
+  
+}
 .thingstodo {
   margin: 50px;
   display: flex;
-  flex-wrap: nowrap;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  flex-direction: column;
   gap: 10px;
+}
+
+.activity {
+    display: flex;
+    width: 100%;
+}
+
+.toDoCard {
+     display: flex;
+    width: clamp(193.5px, 20vw, 297.5px);
+    justify-content: center;
+    flex-shrink: 1;
+    gap: 10px;
+    flex-wrap: nowrap;
+
 }
 
 .about {
@@ -349,9 +386,11 @@ body {
   /* --Tablet-- */
 @media (max-width: 1024px) {
   .accommodation-and-popular {
-    display: flex;
+    flex-direction: column;
   }
-
+.popular-cards {
+    flex-direction: row;
+}
   .accommodation, .popular {
     width: 100%;
   }
@@ -363,7 +402,7 @@ body {
   }
 
   .accommodation-grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    
   }
 
   .accommodation-pictures {
