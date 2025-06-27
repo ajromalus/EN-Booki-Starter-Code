@@ -55,6 +55,7 @@ a {
   list-style: none;
   justify-content: flex-end;
   margin: 0;
+  width: 100%;
   padding-bottom: 5px;
   right: 0;
 }
@@ -369,6 +370,7 @@ body {
 
 .activity {
     display: flex;
+    justify-content: space-evenly;
     width: 100%;
 }
 
@@ -483,6 +485,36 @@ body {
     margin: 0;
     padding: 0;
   }
+  .headerItems {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    width: 100%;
+  }
+
+  .headline {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+  .popular-cards {
+    padding-top: 10px;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .popular-cards img {
+
+  height: 100px; 
+  object-fit: cover;
+  
+}
+
 
   .filterButtons {
     display: grid;
@@ -495,7 +527,6 @@ body {
     grid-auto-rows: 50px; 
   }
 
-
   .main-container {
     padding: 10px;
     flex-direction: column;
@@ -506,9 +537,14 @@ body {
     align-items: center;
     margin: auto;
   }
-
+  .accommodation-and-popular section {
+    border-radius: 0;
+  }
   .accommodation-and-popular {
-    flex-direction: column;
+    flex-direction: column-reverse;
+  }
+  .accommodation {
+    background-color: white !important;
   }
 
   .accommodation, .popular {
@@ -516,7 +552,8 @@ body {
   }
 
   .popular {
-    margin-top: 30px;
+    
+    background-color: #F2F2F2 !important;
   }
 
   .accommodation-grid {
@@ -528,7 +565,7 @@ body {
 
   .accommodation-card {
     width: 100%;
-    max-width: none;
+    max-width: 335px;
   }
 
   .accommodation-pictures {
@@ -551,24 +588,26 @@ body {
   .activity {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 10px;
   }
   .thingstodo {
     display: grid;
     grid-template-columns: 1fr;
     width: 100%;
+    margin: 0 auto;
     gap: 10px;
     padding: 0 10px;
     box-sizing: border-box;
   }
   .toDoCard {
-    width: 100%;      /* fill the column */
-    flex-wrap: wrap;  /* allow content inside to wrap */
+    width: 100%;      
+    flex-wrap: wrap;  
     justify-content: center;
   }
 
   .toDoCard img {
-    width: 100%;      /* responsive images */
+    width: 100%;     
     height: auto;
     object-fit: cover;
   }
